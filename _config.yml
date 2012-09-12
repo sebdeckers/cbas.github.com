@@ -7,14 +7,15 @@ exclude:
 - README.md
 
 prose:
-  rooturl: "_posts"
+  rooturl: "_posts/articles"
   metadata:
     _posts/articles: |
-      published: false
-      layout: article
       title: Your Post Title
       abstract: Short summary of your article.
+      published: false
+      comments: true
       author_twitter: sebdeckers
       author: Sebastiaan Deckers
+      layout: article
       categories:
       - articles

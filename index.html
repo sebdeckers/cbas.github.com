@@ -10,7 +10,7 @@ layout: default
   {% endfor %}
 </div>
 
-{% for item in site.categories.articles limit:1 offset:0 %}
+{% for item in site.categories.articles limit:10 offset:0 %}
   <div class="intro">
     <div class="title">{{item.title}}</div>
     <div class="abstract">{{item.abstract}}</div>
