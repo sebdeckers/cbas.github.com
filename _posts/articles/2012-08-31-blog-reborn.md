@@ -2,7 +2,7 @@
 published: true
 layout: article
 title: Blog Reborn
-abstract: Blogging
+abstract: Here we go again.
 author_twitter: sebdeckers
 author: Sebastiaan Deckers
 categories:
