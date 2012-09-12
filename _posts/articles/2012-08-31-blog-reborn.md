@@ -2,14 +2,12 @@
 published: true
 layout: article
 title: Blog Reborn
-abstract: Here we go again.
+abstract: Now with 100% more vitriol!
 author_twitter: sebdeckers
 author: Sebastiaan Deckers
 categories:
 - articles
 ---
-
-## Now with 100% more vitriol!
 
 I'd been meaning to set up a generated static site hosted on [GitHub Pages](http://pages.github.com/), deployed by [Jekyll](http://jekyllrb.com/), and written in [Markdown](http://github.github.com/github-flavored-markdown/) using [Prose](http://prose.io/).
 
