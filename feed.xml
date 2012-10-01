@@ -1,0 +1,33 @@
+---
+layout: nil
+---
+
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>functionn.github.com</title>
+  <link href="http://functionn.github.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://functionn.github.com/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://ninja.sg/</id>
+  <author>
+    <name>Sebastiaan Deckers</name>
+    <email>seb@ninja.sg</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://ninja.sg/{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://functionn.github.com{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Sebastiaan Deckers</name>
+      <uri>http://ninja.sg/</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+ 
+</feed>
