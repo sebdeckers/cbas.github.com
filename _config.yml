@@ -22,9 +22,11 @@ analytics:
     id: UA-34478357-1
 
 comments:
-  provider: livefyre
+  provider: disqus
   livefyre:
     site: 313014
+  disqus:
+    site: ninjasg
 
 prose:
   rooturl: "_posts/articles"

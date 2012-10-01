@@ -10,25 +10,22 @@
   <link href="{{ site.baseurl }}feed.xml" type="application/atom+xml" rel="alternate" title="The Blog of {{ site.owner.name }}" />
 </head>
 <body>
-
   <header>
     <h1>
-      <a href="{{ site.baseurl }}" class="title">The Blog of {{ site.owner.name }}</a>
+      <a href="{{ site.baseurl }}" class="title">
+        The Blog of {{ site.owner.name }}
+      </a>
     </h1>
   </header>
-
   {{content}}
-
   <footer>
     Written by <a href="{{ site.owner.contact }}">{{ site.owner.name }}</a>,
     published under <a href="{{ site.license.url }}">{{ site.license.name }}</a>,
     code on <a href="{{ site.owner.github }}">GitHub</a>.
   </footer>
-
   {% case site.analytics.provider %}
     {% when "google" %}
       {% include analytics/google.html %}
   {% endcase %}
-
 </body>
 </html>

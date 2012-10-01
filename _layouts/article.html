@@ -4,35 +4,23 @@ layout: default
 <article>
   <header>
     <h1>
-      <a href="{{ page.url }}" title="{{ page.title }}">
-        {{ page.title }}
-      </a>
+      <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
     </h1>
-    <h2>
-      {{ page.abstract }}
-    </h2>
-
+    <h2>{{ page.abstract }}</h2>
     <aside>
       Posted by <a href="mailto:{{ page.author_email }}">{{ page.author }}</a>
       on {{ page.date | date: "%B %d, %Y" }}
     </aside>
   </header>
-
   {{ content }}
-
 </article>
-
 {% if page.comments %}
 <aside>
   {% case site.comments.provider %}
     {% when "livefyre" %}
       {% include comments/livefyre.html %}
-      <script type='text/javascript'>
-        var fyre = LF({
-          site_id: "{{ site.comments.livefyre.site }}",
-          article_id: "{{ site.url }}{{ page.url }}"
-        });
-      </script>
+    {% when "disqus" %}
+      {% include comments/disqus.html %}
   {% endcase %}
 </aside>
 {% endif %}
