@@ -26,7 +26,7 @@ Fast forward to today: Mozilla's power users, the web developers and techies, ha
 
 The Mozilla Foundation still enjoys record revenues thanks to a lucrative advertising deal with Google. It's guaranteed to bring in $300 million annually until November 2014.
 
-French King Louis XIV created the palace of Versailles to keep the aristocrats busy with parties and frivolities to drain their pockets. The same happened at Mozilla.
+In 17th century France, King Louis XIV created the opulent palace of Versailles for the country's aristocrats. Keeping them with parties and frivolities to waste their time, drain their pockets, and usurp their power. The same happens now at Mozilla.
 
 Google's money has transformed the Mozilla developer community into managers, strategists, marketers, and other non-browser-building types. They love throwing money at [vacuous parties to "celebrate learning"](http://mozillafestival.org/) and [jet-setting with the trendy startup crowd](https://webfwd.org/). I've seen more Mozilla people at socialising events in Singapore's incubators than I've interacted with on GitHub. Where once you'd often land on a raw Bugzilla ticket page, talking directly to code committers, now you're more likely to find fancy "do-gooder" graphics and cleverly written copy on Mozilla's marketing mini-sites.
 
