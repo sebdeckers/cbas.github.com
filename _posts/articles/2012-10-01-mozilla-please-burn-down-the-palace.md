@@ -34,4 +34,4 @@ Google's money has transformed the Mozilla developer community into managers, st
 
 With some historic perspective there is hope for improvement. The history of Mozilla is one of voluntary death and rebirth. From Netscape to Mozilla to Firefox. Each time the browser became bloated and out of touch. Each time hackers did the hard work that needed to be done.
 
-It's time for a fork of Firefox. Get it up on Git. Ditch Bugzilla. Cut away the fat. Rebuild a lean browser to fight Google's privacy-crushing Chrome browser.
+It's time to fork Firefox. Set it up on Git. Ditch Bugzilla. Cut away the fat. Rebuild a lean browser to fight Google's privacy-crushing Chrome browser.
