@@ -21,5 +21,12 @@ layout: default
 <div class="article-wrapper">
   <div class="help post-content">
     {{content}}
+
+    {% if page.comments %}
+    <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+    <script type='text/javascript'>
+    var fyre = LF({site_id: 313014});
+    </script>
+    {% endif %}
   </div>
 </div>
