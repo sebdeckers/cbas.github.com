@@ -5,10 +5,10 @@
 <head>
   <meta charset="UTF-8"/>
   <title>Sebastiaan Deckers</title>
-  <link rel="icon" type="image/png" href="{{site.baseurl}}/images/favicon.png" />
-  <link rel="stylesheet" href="{{site.baseurl}}/fonts/open-sans.css" />
-  <link rel="stylesheet" href="{{site.baseurl}}/app.css" />
-  <link href="feed.xml" type="application/atom+xml" rel="alternate" title="The Blog of Sebastiaan Deckers" />
+  <link rel="icon" type="image/png" href="{{site.baseurl}}images/favicon.png" />
+  <link rel="stylesheet" href="{{site.baseurl}}fonts/open-sans.css" />
+  <link rel="stylesheet" href="{{site.baseurl}}app.css" />
+  <link href="{{site.baseurl}}feed.xml" type="application/atom+xml" rel="alternate" title="The Blog of Sebastiaan Deckers" />
 </head>
 <body>
   <div id="container">
@@ -19,7 +19,9 @@
       </div>
     </div>
 
-    <div id="main">{{content}}</div>
+    <div id="main">
+      {{content}}
+    </div>
   </div>
 
   <div id="footer">

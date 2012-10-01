@@ -3,7 +3,7 @@ title: Mozilla, Please Burn Down the Palace and Rebuild the Community
 abstract: What's the matter with Mozilla these days?
 published: true
 comments: true
-author_twitter: sebdeckers
+author_email: seb@ninja.sg
 author: Sebastiaan Deckers
 layout: article
 categories:

@@ -2,6 +2,7 @@ auto: true
 server: true
 permalink: none
 baseurl: ""
+url: "http://ninja.sg"
 exclude:
 - .gitignore
 - README.md
@@ -14,7 +15,7 @@ prose:
       abstract: Short summary of your article.
       published: false
       comments: true
-      author_twitter: sebdeckers
+      author_email: seb@ninja.sg
       author: Sebastiaan Deckers
       layout: article
       categories:

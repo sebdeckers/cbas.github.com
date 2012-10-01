@@ -3,7 +3,7 @@ title: How Facebook Shot Itself in the Foot
 abstract: The Facebook iOS app shifted from HTML5 to native code.
 published: true
 comments: true
-author_twitter: sebdeckers
+author_email: seb@ninja.sg
 author: Sebastiaan Deckers
 layout: article
 categories:

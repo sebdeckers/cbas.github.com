@@ -3,7 +3,7 @@ published: true
 layout: article
 title: Blog Reborn
 abstract: Now with 100% more vitriol!
-author_twitter: sebdeckers
+author_email: seb@ninja.sg
 author: Sebastiaan Deckers
 categories:
 - articles

@@ -3,7 +3,7 @@ title: Gamification Is Not About Games
 abstract: Gamification is often misunderstood by entrepreneurs.
 published: true
 comments: true
-author_twitter: sebdeckers
+author_email: seb@ninja.sg
 author: Sebastiaan Deckers
 layout: article
 categories:
