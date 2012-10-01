@@ -1,10 +1,11 @@
 ---
-published: true
-layout: article
 title: Blog Reborn
 abstract: Now with 100% more vitriol!
+published: true
+comments: true
 author_email: seb@ninja.sg
 author: Sebastiaan Deckers
+layout: article
 categories:
 - articles
 ---
