@@ -1,32 +1,38 @@
 ---
 layout: default
 ---
-<div class="article-navigation">
-  {% for item in site.categories.articles limit:40 offset:0 %}
-    <a class="article-link" href="{{item.url}}" title="{{item.title}}">
-    </a>
-  {% endfor %}
-</div>
+<article>
+  <header>
+    <h1>
+      <a href="{{ page.url }}" title="{{ page.title }}">
+        {{ page.title }}
+      </a>
+    </h1>
+    <h2>
+      {{ page.abstract }}
+    </h2>
 
-<div class="intro">
-  <div class="title">
-    <a href="{{page.url}}" title="{{page.title}}">
-      {{page.title}}
-    </a>
-  </div>
-  <div class="abstract">{{page.abstract}}</div>
-  <div class="meta">Posted by <a href="mailto:{{page.author_email}}">{{page.author}}</a> on {{page.date | date: "%B %d, %Y"}}</div>
-</div>
+    <aside>
+      Posted by <a href="mailto:{{ page.author_email }}">{{ page.author }}</a>
+      on {{ page.date | date: "%B %d, %Y" }}
+    </aside>
+  </header>
 
-<div class="article-wrapper">
-  <div class="help post-content">
-    {{content}}
+  {{ content }}
 
-    {% if page.comments %}
-    <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
-    <script type='text/javascript'>
-    var fyre = LF({site_id: 313014});
-    </script>
-    {% endif %}
-  </div>
-</div>
+</article>
+
+{% if page.comments %}
+<aside>
+  {% case site.comments.provider %}
+    {% when "livefyre" %}
+      {% include comments/livefyre.html %}
+      <script type='text/javascript'>
+        var fyre = LF({
+          site_id: "{{ site.comments.livefyre.site }}",
+          article_id: "{{ site.url }}{{ page.url }}"
+        });
+      </script>
+  {% endcase %}
+</aside>
+{% endif %}

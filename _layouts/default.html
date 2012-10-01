@@ -4,43 +4,31 @@
 <html>
 <head>
   <meta charset="UTF-8"/>
-  <title>Sebastiaan Deckers</title>
-  <link rel="icon" type="image/png" href="{{site.baseurl}}images/favicon.png" />
-  <link rel="stylesheet" href="{{site.baseurl}}fonts/open-sans.css" />
-  <link rel="stylesheet" href="{{site.baseurl}}app.css" />
-  <link href="{{site.baseurl}}feed.xml" type="application/atom+xml" rel="alternate" title="The Blog of Sebastiaan Deckers" />
+  <title>{{ page.title }} | {{ site.owner.name }}</title>
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}images/favicon.png" />
+  <link rel="stylesheet" href="{{ site.baseurl }}app.css" />
+  <link href="{{ site.baseurl }}feed.xml" type="application/atom+xml" rel="alternate" title="The Blog of {{ site.owner.name }}" />
 </head>
 <body>
-  <div id="container">
 
-    <div id="header">
-      <div class="navigation">
-        <a href="{{site.baseurl}}" class="title">The Blog of Sebastiaan Deckers</a>
-      </div>
-    </div>
+  <header>
+    <h1>
+      <a href="{{ site.baseurl }}" class="title">The Blog of {{ site.owner.name }}</a>
+    </h1>
+  </header>
 
-    <div id="main">
-      {{content}}
-    </div>
-  </div>
+  {{content}}
 
-  <div id="footer">
-    <div class="footer-content">
-      Blog posts by <a href="mailto:seb@ninja.sg">Sebastiaan Deckers</a>, source code on <a href="http://git.io/seb">GitHub</a>.
-    </div>
-  </div>
+  <footer>
+    Written by <a href="{{ site.owner.contact }}">{{ site.owner.name }}</a>,
+    published under <a href="{{ site.license.url }}">{{ site.license.name }}</a>,
+    code on <a href="{{ site.owner.github }}">GitHub</a>.
+  </footer>
 
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-34478357-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+  {% case site.analytics.provider %}
+    {% when "google" %}
+      {% include analytics/google.html %}
+  {% endcase %}
 
 </body>
 </html>

@@ -1,27 +1,46 @@
 ---
 layout: default
+title: Blog
 ---
-<div class="article-navigation">
-  {% for item in site.categories.articles limit:40 offset:0 %}
-    <a class="article-link" href="{{item.url}}" title="{{item.title}}">
-    </a>
+<ol class="articles">
+  {% for post in site.categories.articles %}
+
+  {% if forloop.first %}
+  <li class="latest">
+  {% elsif forloop.index <= 3 %}
+  <li class="recent">
+  {% else %}
+  <li>
+  {% endif %}
+
+    <article>
+      <header>
+        <h1>
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            {{ post.title }}
+          </a>
+        </h1>
+
+        {% if forloop.index <= 3 %}
+        <h2>
+          {{ post.abstract }}
+        </h2>
+        {% endif %}
+
+        {% if forloop.first %}
+        <aside>
+          Posted by <a href="mailto:{{ post.author_email }}">{{ post.author }}</a>
+          on {{ post.date | date: "%B %d, %Y" }}
+        </aside>
+        {% endif %}
+
+      </header>
+
+      {% if forloop.first %}
+      {{ post.content | strip_html | truncatewords: 20 }}
+      {% endif %}
+
+    </article>
+  </li>
   {% endfor %}
-</div>
-
-{% for item in site.categories.articles limit:10 offset:0 %}
-  <div class="intro">
-    <div class="title">
-      <a href="{{item.url}}" title="{{item.title}}">
-        {{item.title}}
-      </a>
-    </div>
-    <div class="abstract">{{item.abstract}}</div>
-    <div class="meta">Posted by <a href="mailto:{{item.author_email}}">{{item.author}}</a> on {{item.date | date: "%B %d, %Y"}}</div>
-  </div>
-
-  <div class="article-wrapper">
-    <div class="help post-content">
-      {{item.content}}
-    </div>
-  </div>
-{% endfor %}
+</ol>

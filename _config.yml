@@ -2,10 +2,29 @@ auto: true
 server: true
 permalink: none
 baseurl: "/"
-url: "http://ninja.sg"
+url: http://ninja.sg
 exclude:
 - .gitignore
 - README.md
+
+owner:
+  name: Sebastiaan Deckers
+  contact: mailto:seb@ninja.sg
+  github: http://git.io/seb
+
+license:
+  name: CC-BY-SA
+  url: http://creativecommons.org/licenses/by-sa/3.0/
+
+analytics:
+  provider: google
+  google:
+    id: UA-34478357-1
+
+comments:
+  provider: livefyre
+  livefyre:
+    site: 313014
 
 prose:
   rooturl: "_posts/articles"
