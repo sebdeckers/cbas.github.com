@@ -5,6 +5,9 @@ body > * {
 body > header {
   margin: 5em auto 5em auto;
 }
+body > ol {
+  list-style-position: inside;
+}
 body > article > header > aside {
   font-style: italic;
 }
