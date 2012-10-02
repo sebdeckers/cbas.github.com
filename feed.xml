@@ -3,6 +3,7 @@ layout: nil
 ---
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+  <link rel="hub" href="https://pubsubhubbub.appspot.com"/>
   <title>The Blog of {{ site.owner.name }}</title>
   <link href="{{ site.url }}{{ site.baseurl }}"/>
   <link type="application/atom+xml" rel="self" href="{{ site.url }}{{ site.baseurl }}feed.xml"/>
