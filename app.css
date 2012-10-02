@@ -8,6 +8,9 @@ body > header {
 body > ol {
   list-style-position: inside;
 }
+body > ol > li > i {
+  white-space: nowrap;
+}
 body > article > header > aside {
   font-style: italic;
 }
