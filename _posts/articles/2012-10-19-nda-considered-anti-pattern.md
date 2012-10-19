@@ -12,7 +12,7 @@ categories:
 
 Building products and startups at [Cofounders.sg](http://www.cofounders.sg/), I spend a fair amount of time talking to entrepreneurs about their ideas to change the world. This is really exciting. Red flags are raised, however, by those who propose **Non-Disclosure Agreements** even before the first meeting. These are often poorly worded documents, frightening to read, come with a variety of threats and restrictions, and offer nothing in return except the vague promise of some idea that is *oh-so-sure* to succeed.
 
-It's amazing that in a time of Lean Startup openness and collaboration some entrepreneurs still try to cover up what they a working on.
+It's amazing that in a time of Lean Startup openness and collaboration some entrepreneurs still try to cover up what they are working on.
 
 As a rule I always reject NDAs or similar restrictions at this early stage. There are non-disclosure clauses in our project agreement with clients, but that covers the work done during projects, not the startup's initial ideas and unproven hypotheses.
 
