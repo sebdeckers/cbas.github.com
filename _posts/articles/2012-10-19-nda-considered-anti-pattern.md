@@ -1,7 +1,7 @@
 ---
 title: NDAs Considered an Anti-Pattern
 abstract: The opportunity cost of execution is greater than the value of any unproven idea.
-published: true
+published: false
 comments: true
 author_email: seb@ninja.sg
 author: Sebastiaan Deckers
