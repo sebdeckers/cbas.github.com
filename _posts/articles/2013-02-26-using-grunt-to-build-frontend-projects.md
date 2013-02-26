@@ -1,7 +1,7 @@
 ---
 title: Using Grunt to Optimise Frontend Projects
 abstract: Grunt is the Javascript developer's shiny new build tool.
-published: false
+published: true
 comments: true
 author_email: seb@ninja.sg
 author: Sebastiaan Deckers
