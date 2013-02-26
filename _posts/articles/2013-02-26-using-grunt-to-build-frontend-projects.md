@@ -1,5 +1,5 @@
 ---
-title: Using Grunt to Optimise Frontend Projects
+title: Using Grunt to Build Frontend Projects
 abstract: Grunt is the Javascript developer's shiny new build tool.
 published: true
 comments: true
