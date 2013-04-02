@@ -36,7 +36,7 @@ before_install:
 before_script:
   - phantomjs --version
   - casperjs --version
-{ % endhighlight %}
+{% endhighlight %}
 
 ### package.json
 
@@ -46,7 +46,7 @@ Hook up `npm test` to `grunt test`:
 "scripts": {
 	"test": "grunt test"
 }
-{ % endhighlight %}
+{% endhighlight %}
 
 And set up the dependencies. *Latest versions at the time of writing. Use [Gemnasium](https://gemnasium.com/) to update.*
 
@@ -58,7 +58,7 @@ And set up the dependencies. *Latest versions at the time of writing. Use [Gemna
 	"grunt-contrib-nodeunit": "0.1.2",
 	"grunt-ghost": "1.0.8"
 }
-{ % endhighlight %}
+{% endhighlight %}
 
 ### Gruntfile.js
 
@@ -69,13 +69,13 @@ grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-nodeunit');
 grunt.loadNpmTasks('grunt-ghost');
-{ % endhighlight %}
+{% endhighlight %}
 
 Set up `test` to invoke our testing frameworks.
 
 {% highlight js %}
 grunt.registerTask('test', ['jshint', 'nodeunit', 'connect', 'ghost']);
-{ % endhighlight %}
+{% endhighlight %}
 
 Configure the targets. These are just examples and you should modify them for your project's directory structure.
 
@@ -119,7 +119,7 @@ ghost: {
 		printFilePaths: true
 	}
 }
-{ % endhighlight %}
+{% endhighlight %}
 
 ### And one `git push` later...
 
