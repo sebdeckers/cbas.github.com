@@ -22,7 +22,7 @@ Have a look at the [cbas/demo-testing](https://github.com/cbas/demo-testing) rep
 
 Using a `before_install` hook we download CasperJS and add it to the `PATH` environment variable.
 
-```yaml
+{% highlight yaml %}
 language: node_js
 node_js:
   - "0.8"
@@ -36,21 +36,21 @@ before_install:
 before_script:
   - phantomjs --version
   - casperjs --version
-```
+{ % endhighlight %}
 
 ### package.json
 
 Hook up `npm test` to `grunt test`:
 
-```json
+{% highlight json %}
 "scripts": {
 	"test": "grunt test"
 }
-```
+{ % endhighlight %}
 
 And set up the dependencies. *Latest versions at the time of writing. Use [Gemnasium](https://gemnasium.com/) to update.*
 
-```json
+{% highlight json %}
 "devDependencies": {
 	"grunt": "0.4.1",
 	"grunt-contrib-connect": "0.2.0",
@@ -58,28 +58,28 @@ And set up the dependencies. *Latest versions at the time of writing. Use [Gemna
 	"grunt-contrib-nodeunit": "0.1.2",
 	"grunt-ghost": "1.0.8"
 }
-```
+{ % endhighlight %}
 
 ### Gruntfile.js
 
 Import the dependencies.
 
-```js
+{% highlight js %}
 grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-nodeunit');
 grunt.loadNpmTasks('grunt-ghost');
-```
+{ % endhighlight %}
 
 Set up `test` to invoke our testing frameworks.
 
-```js
+{% highlight js %}
 grunt.registerTask('test', ['jshint', 'nodeunit', 'connect', 'ghost']);
-```
+{ % endhighlight %}
 
 Configure the targets. These are just examples and you should modify them for your project's directory structure.
 
-```js
+{% highlight js %}
 jshint: {
 	options: {
 		jshintrc: '.jshintrc'
@@ -119,7 +119,7 @@ ghost: {
 		printFilePaths: true
 	}
 }
-```
+{ % endhighlight %}
 
 ### And one `git push` later...
 
