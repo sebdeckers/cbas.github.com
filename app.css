@@ -28,3 +28,6 @@ pre {
   -ms-tab-size: 4;
   tab-size: 4;
 }
+.gist pre {
+  white-space: pre;
+}
