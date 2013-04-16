@@ -31,3 +31,6 @@ pre {
 .gist pre {
   white-space: pre;
 }
+.gist .gist-data.gist-syntax {
+  background-color: #ffffcc;
+}
