@@ -1,5 +1,7 @@
-auto: true
-server: true
+safe: true
+lsi: false
+pygments: true
+source: .
 permalink: /:title/
 baseurl: "/"
 url: http://ninja.sg
