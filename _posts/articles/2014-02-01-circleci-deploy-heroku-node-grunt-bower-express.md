@@ -50,8 +50,6 @@ grunt.registerTask('test', [
 
 ## Continuous Integration with CircleCI
 
-I've used TravisCI and CircleCI on commercial, production apps. There are many others, like Codeship, which I will not cover in this tutorial. Even good old Jenkins can be used, if you can take the pain of configuring and maintaining it.
-
 I use CircleCI to test commits on any branch. CircleCI automatically runs `npm install` and `npm test` for any project with a `package.json` file. Before running tests, I tell it to run `bower install` which retrieves the frontend dependencies.
 
 Upon a successful test, CircleCI can deploy the app to Heroku. Following Git Flow conventions, the `master` branch deploys to my production app, and the `develop` branch to my staging app.
