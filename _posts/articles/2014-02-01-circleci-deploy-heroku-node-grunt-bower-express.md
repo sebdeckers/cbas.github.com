@@ -52,12 +52,15 @@ grunt.registerTask('test', [
 
 I've used TravisCI and CircleCI on commercial, production apps. There are many others, like Codeship, which I will not cover in this tutorial. Even good old Jenkins can be used, if you can take the pain of configuring and maintaining it.
 
-I use CircleCI to test commits on any branch. CircleCI automatically runs `npm install` and `npm test` for any project with a `package.json` file. This works out of the box, nice.
+I use CircleCI to test commits on any branch. CircleCI automatically runs `npm install` and `npm test` for any project with a `package.json` file. Before running tests, I tell it to run `bower install` which retrieves the frontend dependencies.
 
 Upon a successful test, CircleCI can deploy the app to Heroku. Following Git Flow conventions, the `master` branch deploys to my production app, and the `develop` branch to my staging app.
 
-**CircleCI `circle.yml`**
+**circle.yml**
 {% highlight yaml %}
+test:
+  pre:
+    - bower install
 deployment:
   production:
     branch: master
@@ -69,7 +72,7 @@ deployment:
       appname: my-app-staging
 {% endhighlight %}
 
-Change `my-app-production` and `my-app-staging` to your respective Heroku app names.
+**Note:** Change `my-app-production` and `my-app-staging` to your respective Heroku app names.
 
 ## Deploying to Heroku
 
@@ -92,33 +95,49 @@ heroku config:set BUILDPACK_URL=https://github.com/mbuchetics/heroku-buildpack-n
 heroku config:set BUILDPACK_URL=https://github.com/mbuchetics/heroku-buildpack-nodejs-grunt.git --app my-app-production
 {% endhighlight %}
 
-### Bower
+### Grunt & Bower
 
-Bower can use a hook in `package.json` to install the app's dependencies.
+The buildpack runs `grunt heroku`, which is used to run the necessary tasks that will fetch dependencies and generate the static files. I use the `grunt-bower-task` package to install Bower dependencies.
 
 **package.json snippet:**
 {% highlight json %}
-"scripts": {
-  "postinstall": "node_modules/.bin/bower install"
-},
-"dependencies": {
-  "bower": "*"
+dependencies: {
+  "bower": "*",
+  "grunt-bower-task": "0.3.4"
 }
 {% endhighlight %}
 
-### Grunt
-
-With all dependencies in place, Grunt can generate the static files. The buildpack runs `grunt heroku` which can easily be mapped to the `default` task.
-
+**Gruntfile snippet:**
 {% highlight js %}
+grunt.initConfig({
+  bower: {
+    install: {
+    }
+  }
+});
+
 grunt.registerTask('heroku', [
-  'default'
+  'bower', // Runs `bower install` to fetch frontend dependencies
+  'default' // Builds the static app files: HTML, JS, CSS, images, etc.
 ]);
 {% endhighlight %}
 
 ### Procfile
 
-Finally just spin up a web server to host the static files.
+Finally launch a web server to host the static files.
+
+**Gruntfile snippet:**
+{% highlight js %}
+grunt.initConfig({
+  connect: {
+    production: {
+      options: {
+        port: process.env.PORT || 80
+      }
+    }
+  }
+});
+{% endhighlight %}
 
 **Procfile**
 {% highlight yaml %}
