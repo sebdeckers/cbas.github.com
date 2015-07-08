@@ -7,16 +7,7 @@
 
 #### Windows Compatibility
 
-Use Ruby 1.9.3 and Pygments.rb 0.5.0
-
-After installing dependencies, run:
-
-    gem uninstall pygments.rb
-    gem install pygments.rb  -v 0.5.0
-
-And in `Gemfile.lock` edit as follows:
-
-    pygments.rb (0.5.0)
+Use Ruby 2.0.0-p645 and DevKit mingw64-32-4.7.2.
 
 ## Local Development
 
