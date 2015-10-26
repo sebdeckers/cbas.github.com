@@ -1,4 +1,6 @@
-safe: true
+# safe: true
+gems:
+  - jemoji
 lsi: false
 highlighter: pygments
 source: .
