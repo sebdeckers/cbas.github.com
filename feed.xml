@@ -6,7 +6,7 @@ layout: null
   <link rel="hub" href="https://pubsubhubbub.appspot.com"/>
   <title>The Blog of {{ site.owner.name }}</title>
   <link href="{{ site.url }}{{ site.baseurl }}"/>
-  <link type="application/atom+xml" rel="self" href="{{ site.url }}{{ site.baseurl }}feed.xml"/>
+  <link type="application/atom+xml" rel="self" href="{{ site.url }}{{ site.baseurl }}/feed.xml"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}{{ site.baseurl }}</id>
   <author>

@@ -5,7 +5,7 @@ lsi: false
 highlighter: pygments
 source: .
 permalink: /:title/
-baseurl: "/"
+baseurl: ""
 url: http://ninja.sg
 exclude:
 - .gitignore
